@@ -14,7 +14,7 @@ console.log(dataGhibli)
 const showInfo = () => {
 
     for (let i = 0; i < dataGhibli.length; i++) {
-        console.log(dataGhibli[i].poster)
+
 
 
 
@@ -29,14 +29,20 @@ const showInfo = () => {
 };
 
 showInfo()
+//dataGhibli en la posicion de [i] es un objeto, y para que queden dentro de una array uso filtro push.
+//en la condicional if preguntamos que las peliculas(dataGhibli[i].director)sean (==)solo de Miyasaki
 
-const filterDirector = () => {
+const filterDirector = (director) => {
+    let allDirectors = []
     for (let i = 0; i < dataGhibli.length; i++) {
-        console.log(dataGhibli[i].director)
-        if (dataGhibli[i] == ["Hayao Miyazaki"]) {
-            console.log(dataGhibli[i].director)
-         }
+//en la condicional if, preguntamos que las peliculas que estan en el objeto dataGhibli[i] sean del director que se pida.
+        if (dataGhibli[i].director === director) {
+            console.log(dataGhibli[i])
+            allDirectors.push(dataGhibli[i])//use el filtro push, asi se filtran los objetos dentro de la variable allDirectors que estan en la array
+        }
     }
+    return allDirectors//retorna las variables que estan dentro de la array
 }
+//buscar y hacer select y addEvenListener
 
-filterDirector()
+console.log(filterDirector("Isao Takahata"))
