@@ -7,3 +7,4 @@ export const example = () => {
 export const anotherExample = () => {
   return 'OMG';
 };
+//aqui van todas mis funciones

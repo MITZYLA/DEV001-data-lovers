@@ -11,22 +11,36 @@
   <header>
     <!--- titulo-->
     <h1 class="titulo">ESTUDIO GHIBLI</h1>
-    <!--------imagen de cabecera------>
+    <!---imagen de cabecera--->
     <div style="text-align: center;">
       <img src="https://www.el-parnasillo.com/miyazaki-ghibli/studio-ghibli.jpg" class="IMAGEN1CABEZA">
     </div>
-    <div class="contenedor">
-      <select name="por titulo" id="selecciona">
+  </header>
+    
+      <!---dentro del div, hice un selector con sus respectivas opciones con un boton buscar y un buscador alfabetico--->
+      <!---<select name="selecciona" id="selecciona" class="selecciona">-->
+      <select name="Seleccionar" id="Seleccionar" class="Seleccionar">        
+        <option value="nombres de directores">Nombre director</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+        <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+        <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>               
+      </select>
+      
+      <select name="seleccionaAZ" id="seleccionaAZ" class="seleccionaAZ">
+        <option value="">A - Z</option>
+        <option value="">Z - A</option>
       </select>
     </div>
-  </header>
-
+    
 
   <div id="root"></div>
 
 
   <script src="main.js" type="module">
-    
+
   </script>
 </body>
 

@@ -15,9 +15,6 @@ const showInfo = () => {
 
     for (let i = 0; i < dataGhibli.length; i++) {
 
-
-
-
         //tome el contenedor vacio y  se le imprimio el img src.
         //dataGhibli es una array, la posicion de i es cada iteracion(i=0) entonces tenemos array en 0 array(0)y eso es un objeto.
         //el .poster es la forma de acceder a un objeto.
@@ -34,15 +31,34 @@ showInfo()
 
 const filterDirector = (director) => {
     let allDirectors = []
+
     for (let i = 0; i < dataGhibli.length; i++) {
-//en la condicional if, preguntamos que las peliculas que estan en el objeto dataGhibli[i] sean del director que se pida.
+        //en la condicional if, preguntamos que las peliculas que estan en el objeto dataGhibli[i] sean del director que se pida.
         if (dataGhibli[i].director === director) {
             console.log(dataGhibli[i])
-            allDirectors.push(dataGhibli[i])//use el filtro push, asi se filtran los objetos dentro de la variable allDirectors que estan en la array
+            //use el filtro push, asi se filtran los objetos dentro de la variable allDirectors que estan en la array
+            allDirectors.push(dataGhibli[i])
         }
     }
     return allDirectors//retorna las variables que estan dentro de la array
 }
 //buscar y hacer select y addEvenListener
+//document.addEventListener("seleccionar").addEventListener("change",( )=>{
+//});
 
-console.log(filterDirector("Isao Takahata"))
+const select = document.getElementById("Seleccionar")
+console.log(select.value)
+
+select.addEventListener("change", () => { //change es el evnto,escucha el cambio de valor
+    contenedor.innerHTML = ``;
+    const director = select.value
+    filterDirector(director)
+    console.log(filterDirector(director))
+});
+
+
+
+
+
+
+//console.log(filterDirector("Hayao Miyazaki"))
