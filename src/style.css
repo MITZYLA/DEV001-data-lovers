@@ -2,11 +2,38 @@ body {
     background-image: url(https://images.alphacoders.com/690/690755.jpg);
    text-align: center; 
    background-repeat: no-repeat;
+   background-color: rgb(34, 116, 203);
 
 }
 
 .IMAGEN1CABEZA {
-    background-image: url(https://www.el-parnasillo.com/miyazaki-ghibli/studio-ghibli.jpg)
+    background-image: url(https://www.el-parnasillo.com/miyazaki-ghibli/studio-ghibli.jpg);
+    width: 1000px;
+    height: 500px;
     
+    
+}
+
+#root{
+    display: flex;
+    /*flex wrap alineo e hizo las imagenes del mismo tamaño*/
+    flex-wrap: wrap;
+    /*si pongo space between en justify content pone espacio entre todas las tarjetas*/
+    
+    align-items: space-between;
+    justify-content: center;
+
 
 }
+
+.titulo{
+    font-size: 3em;
+    text-align: left;
+    }
+
+.caratulas{
+    margin: 20px;
+    padding: 20px;
+    height: 500px;
+}
+/*@media only screen and (min-width: 600px){aqui va el root y todas las instrucciones}...para ver el tamaño de las cartas en rsponsive*/

@@ -1,23 +1,47 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterDirector} from '../src/data.js';
+//test para director(select)
+let directorFiltrado = [
+  {
+    title: "Castle in the sky",
+    director: "Hayao Miyazaki",
+  },
+  {
+    title: "My Neighbor Totoro",
+    director: "Hayao Miyazaki",
+  },
+  {
+    title: "Grave of the Fireflies",
+    director:"Isao Takahata",
+  }
+];
+let Miyazaki = [
+  {
+    title: "Castle in the sky",
+    director: "Hayao Miyazaki",
+  },
+  {
+    title: "My Neighbor Totoro",
+    director: "Hayao Miyazaki",
+  },
+];
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe("filterDirector", () => {
+  it("es una funcion", () => {
+    expect(typeof filterDirector).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it("retornar solo Hayao films", () => {
+    expect(filterDirector("Hayao Miyazaki",directorFiltrado)).toEqual(Miyazaki);
   });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
+//describe('anotherExample', () => {
+  //it('is a function', () => {
+   // expect(typeof anotherExample).toBe('function');
+ // });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+  //it('returns `anotherExample`', () => {
+    //expect(anotherExample()).toBe('OMG');
+  //});
+//});
