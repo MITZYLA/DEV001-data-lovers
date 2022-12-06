@@ -40,13 +40,13 @@ export const orderAZ = (arrayMovies, selectOrder) => {
 
   //N3..if (selectOrder == "A-Z") {
   //let orderAZ = arrayMovies.sort((a, b) =>
-      //a.title.localCompare(b.title)
+      //a.title.localeCompare(b.title)
     //)
     //return orderAZ
   //}
   // else if (selectOrder == "Z-A") {
   //  const orderZA = arrayMovies.sort((a, b) =>
-   //  b.title.localCompare(a.title)
+   //  b.title.localeCompare(a.title)
   //  )
   //  return orderZA
   //} else { return arrayMovies }

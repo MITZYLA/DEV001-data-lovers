@@ -43,8 +43,8 @@ seleccionarDir.addEventListener("change", () => { //change es el evnto,escucha e
 seleccionaAZ.addEventListener("change", () => {
     contenedor.innerHTML = ``;
     const orderValue = seleccionaAZ.value
-    showInfo(filterDirector(dataGhibli))
-    console.log(orderAZ(dataGhibli, orderValue))
+    showInfo(orderAZ(dataGhibli, orderValue))
+  
 });
 
 
