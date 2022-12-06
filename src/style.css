@@ -1,17 +1,16 @@
-body {
-    background-image: url(https://images.alphacoders.com/690/690755.jpg);
-   text-align: center; 
-   background-repeat: no-repeat;
-   background-color: rgb(34, 116, 203);
-
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
-.IMAGEN1CABEZA {
-    background-image: url(https://www.el-parnasillo.com/miyazaki-ghibli/studio-ghibli.jpg);
-    width: 1000px;
-    height: 500px;
-    
-    
+body {
+    background-image: url(https://images.alphacoders.com/690/690755.jpg);
+    background-position: 100px;
+   text-align: center; 
+   background-repeat: no-repeat;
+   background-color: rgb(121, 179, 240);
+   opacity: 2;
+   
 }
 
 #root{
@@ -23,13 +22,22 @@ body {
     align-items: space-between;
     justify-content: center;
 
-
 }
 
 .titulo{
-    font-size: 3em;
-    text-align: left;
+    font-size: 4em;
+    text-align: center;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25), 0px 15px 15px rgba(0, 0, 0, 0.25), inset 0px 15px 15px rgba(0, 0, 0, 0.25);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
     }
+
+.reseñaSG{
+    font-family: cursive;
+    text-align: start;
+    font-size: 25px;
+    padding: 30px;
+}
 
 .caratulas{
     margin: 20px;
@@ -37,3 +45,29 @@ body {
     height: 500px;
 }
 /*@media only screen and (min-width: 600px){aqui va el root y todas las instrucciones}...para ver el tamaño de las cartas en rsponsive*/
+
+#seleccionarDir{
+margin-top: 30px;
+margin-left: 30px;
+padding: 10px;
+border-radius: 100px;
+flex-wrap: nowrap; 
+box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25), 0px 15px 15px rgba(0, 0, 0, 0.25), inset 0px 15px 15px rgba(0, 0, 0, 0.25);
+background-color: rgb(193, 184, 184); 
+text-align: center;  
+font-size: large;
+font-family: 'Lucida Grande';
+}
+
+#seleccionaAZ{
+margin-top: 30px;
+margin-left: 30px;
+padding: 10px;
+border-radius: 100px;
+flex-wrap: nowrap;
+box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25), 0px 15px 15px rgba(0, 0, 0, 0.25), inset 0px 15px 15px rgba(0, 0, 0, 0.25);
+background-color: rgb(193, 184, 184);
+text-align: center;
+font-size: large;
+font-family: 'Lucida Grande';
+}
