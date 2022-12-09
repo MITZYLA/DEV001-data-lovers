@@ -44,8 +44,10 @@ seleccionaAZ.addEventListener("change", () => {
     contenedor.innerHTML = ``;
     const orderValue = seleccionaAZ.value
     showInfo(orderAZ(dataGhibli, orderValue))
-  
+ 
 });
+
+
 
 
 

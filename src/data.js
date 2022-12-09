@@ -17,39 +17,32 @@ export const filterDirector = (nombreDirector, arrayGhibli) => {
 
 export const orderAZ = (arrayMovies, selectOrder) => {
 
-  arrayMovies.sort(function (a, b) {
-    if (a.title < b.title) {
-      return -1;
-    }
-    if (a.title > b.title) {
-      return 1;
-    }
-    return 0;
-  });
+  if (selectOrder == "A-Z") {
+
+
+    arrayMovies.sort(function (a, b) {
+      if (a.title < b.title) {
+        return -1;
+      }
+      if (a.title > b.title) {
+        return 1;
+      }
+      return 0;
+    });
+  } else {
+    arrayMovies.sort(function (a, b) {
+      if (a.title > b.title) {
+        return -1;
+      }
+      if (a.title < b.title) {
+        return 0;
+      }
+    });
+  }
+
 
   return arrayMovies;
 
 
-
 };
-
-
-
-
-
-
-  //N3..if (selectOrder == "A-Z") {
-  //let orderAZ = arrayMovies.sort((a, b) =>
-      //a.title.localeCompare(b.title)
-    //)
-    //return orderAZ
-  //}
-  // else if (selectOrder == "Z-A") {
-  //  const orderZA = arrayMovies.sort((a, b) =>
-   //  b.title.localeCompare(a.title)
-  //  )
-  //  return orderZA
-  //} else { return arrayMovies }
-
-
 
