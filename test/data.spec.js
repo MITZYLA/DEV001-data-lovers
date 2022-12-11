@@ -44,10 +44,17 @@ let selectData = [
   {
     title: "Princess Mononoke"
   },
+  {
+    title: "Castle in the Sky"
+  },
 ];
 
 
+
 let dataSortAZ = [
+  {
+    title: "Castle in the Sky"
+  },
   {
     title: "Castle in the Sky"
   },
@@ -62,6 +69,9 @@ let dataSortZA = [
   {
     title: "Castle in the Sky"
   },
+  {
+    title: "Castle in the Sky"
+  },
 ];
 
 describe("orderAZ", () => {
@@ -70,15 +80,12 @@ describe("orderAZ", () => {
   });
 
   it("Debe retornar las peliculas de  A - Z,", () => {
-    expect(orderAZ(selectData)).toEqual(dataSortAZ);
+    expect(orderAZ(selectData, "A-Z")).toEqual(dataSortAZ);
   });
   it("Debe retornar las peliculas de Z - A,", () => {
-    expect(orderAZ(selectData)).toEqual(dataSortZA);
+    expect(orderAZ(selectData, "Z-A")).toEqual(dataSortZA);
   });
-  it("recorre la array en diferentes casos", () => {
-    expect(orderAZ([{ title: "a" }, { title: "b" }])).toEqual([{ title: "b" }, { title: "a" }]);
-  })
-});
+  });
 
 //it("retornar solo Hayao films", () => {
  // expect(filterDirector("Hayao Miyazaki", directorFiltrado)).toEqual(Miyazaki);

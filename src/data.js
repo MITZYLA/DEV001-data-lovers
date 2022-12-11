@@ -15,12 +15,15 @@ export const filterDirector = (nombreDirector, arrayGhibli) => {
 }
 //seleccionar select y leer valor del cambio
 
+
 export const orderAZ = (arrayMovies, selectOrder) => {
+
+
+  const originalArrayCopy = [...arrayMovies];
 
   if (selectOrder == "A-Z") {
 
-
-    arrayMovies.sort(function (a, b) {
+    originalArrayCopy.sort(function (a, b) {
       if (a.title < b.title) {
         return -1;
       }
@@ -29,8 +32,11 @@ export const orderAZ = (arrayMovies, selectOrder) => {
       }
       return 0;
     });
+    //console.log(originalArrayCopy);
+    //console.log(arrayMovies);
   } else {
-    arrayMovies.sort(function (a, b) {
+    
+    originalArrayCopy.sort(function (a, b) {
       if (a.title > b.title) {
         return -1;
       }
@@ -41,7 +47,7 @@ export const orderAZ = (arrayMovies, selectOrder) => {
   }
 
 
-  return arrayMovies;
+  return originalArrayCopy;
 
 
 };
