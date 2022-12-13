@@ -2,17 +2,17 @@ import { filterDirector, orderAZ } from './data.js';
 import data from './data/ghibli/ghibli.js';
 //declaro la variable contenedor, su id es root
 const contenedor = document.getElementById('root')
-//declaro el objeto y la propiedad en data.film (para acceder a la propiedad de un objeto, objeto.propiedad)
-const dataGhibli = data.films
-//data.films es una array de objetos y se pintan con un bucle for o for each
-//console.log(dataGhibli)
-// showInfo muestra el array de todos los directores que es dataGhibli.
-// la siguiente funcion pinto los primeros posters
-const showInfo = (showFilms) => {  //nombro así al parametro porque necesito el array de las peliculas
+//declaro el objeto y la propiedad en data.film 
+const dataGhibli = data.films //para acceder a la propiedad de un objeto, objeto.propiedad
+//data.films=array de objetos se pintan con un bucle for o for each
 
-    //aquí cambié var por let. es let porque es reasignable(porque tenemos una array(que es dataGhibli) con varios elementos)
+// showInfo muestra el array de todos los directores(dataGhibli)
+// la siguiente funcion pinto los primeros posters
+const showInfo = (showFilms) => {  //showfilms=parametro.(porque necesito el array de las peliculas)
+
+    // tenemos una array(que es dataGhibli) con varios elementos
     //para saber la extension de la array uso la propiedad length
-    //el ultimo indice es 3, es la extension de toda la array -1
+ 
 
     for (let i = 0; i < showFilms.length; i++) {
 
@@ -22,7 +22,7 @@ const showInfo = (showFilms) => {  //nombro así al parametro porque necesito el
         contenedor.innerHTML += `<img class= "caratulas" src=  ${showFilms[i].poster}>`;
         //InnerHtml agrega contenido a una etiqueta especifica en html y el id es necesario porque es la forma de llamar el contenido de html a javascript
     }
-
+          
     return contenedor
 };
 
@@ -31,7 +31,6 @@ showInfo(dataGhibli)
 const seleccionarDir = document.getElementById("seleccionarDir");
 const seleccionaAZ = document.getElementById("seleccionaAZ");
 
-//console.log(select.value)
 
 seleccionarDir.addEventListener("change", () => { //change es el evnto,escucha el cambio de valor
     contenedor.innerHTML = ``;
