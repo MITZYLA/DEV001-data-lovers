@@ -1,12 +1,10 @@
-//aqui van todas mis funciones
-
 export const filterDirector = (nombreDirector, arrayGhibli) => {
   let eachDirectors = []
 
   for (let i = 0; i < arrayGhibli.length; i++) {
     //en la condicional if, preguntamos que las peliculas que estan en el objeto dataGhibli[i] sean del director que se pida.
     if (arrayGhibli[i].director === nombreDirector) {
-      //console.log(arrayGhibli[i])
+      
       //use el filtro push, asi se filtran los objetos dentro de la variable allDirectors que estan en la array
       eachDirectors.push(arrayGhibli[i])
     }
