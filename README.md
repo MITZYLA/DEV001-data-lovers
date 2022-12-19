@@ -51,7 +51,6 @@ PROTOTIPO 2 FINAL:
      ![Captura.IMG.interfazfinal](https://github.com/MITZYLA/DEV001-data-lovers/blob/main/Captura.IMG.interfazfinal.JPG)
      
           
-
  ### 7. ENLACE DE LA INTERFAZ FINAL. 
 
  https://mitzyla.github.io/DEV001-data-lovers/
